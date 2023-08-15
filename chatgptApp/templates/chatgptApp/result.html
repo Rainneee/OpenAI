@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Boxicons CSS -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link href="{% static 'style.css' %}" rel="stylesheet">
+    <title>OpenAI Integration - Result</title>
+</head>
+<body>
+	<div class="container d-flex">
+		<!-- Message -->
+	<div class="row gx-5">
+		<div class="col-md-6">
+			<div class="item">
+				<!-- Story section -->
+				<h1>Generated Story</h1>
+				<p><strong>Topic:</strong> {{ topic }}</p>
+				<p><strong>Style:</strong> {{ style }}</p>
+				
+				<h2>Original Story</h2>
+				<p>{{ story }}</p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="wrapper">
+				<div class="story-form">
+					<h2>Funny Story</h2>
+					<br>
+					<p>{{ funny_story }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Scripts -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>

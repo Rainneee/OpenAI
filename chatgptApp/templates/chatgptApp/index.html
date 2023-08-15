@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Boxicons CSS -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link href="{% static 'style.css' %}" rel="stylesheet">
+	<title>OpenAI Integration</title>
+</head>
+<body>
+	<div class="container d-flex">
+			<!-- Message -->
+		<div class="row gx-5">
+			<div class="col-md-6">
+				<div class="item">
+					<!-- Logo section -->
+					<h2 class="logo"><i class='bx bxs-book-reader bx-tada' ></i> Twisted Tales</h2>
+					<br><br><br><br>
+					<div class="message">
+						<h2>
+							Welcome! <br><span>
+							</span>
+						</h2>
+						<p>
+							This is where different stories take a delightful detour into humor
+							and creativity. Watch as stories come alive in a whole new light. Happy storytelling!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="wrapper">
+					<div class="story-form">
+						<form method="post">
+							<h2>Generate a Story</h2>
+							{% csrf_token %}
+							<div class="input-box">
+								<label for="topic">Topic:</label>
+								<input type="text" name="topic" placeholder="Enter story topic..." required>
+							</div>
+							<div class="select-box">
+								<label for="style">Style:</label>
+								<select name="style" aria-placeholder="Select style">
+									<option value="sad">Sad</option>
+									<option value="scary">Scary</option>
+									<option value="serious">Serious</option>
+									<option value="adventurous">Adventurous</option>
+									<option value="null">Nothing</option>
+								</select>
+							</div> <br><br>
+						
+							<button type="submit" class="gen">Generate</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
